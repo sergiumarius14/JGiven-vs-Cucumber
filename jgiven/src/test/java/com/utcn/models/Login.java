@@ -6,8 +6,8 @@ import lombok.Data;
 @Data
 @Builder
 public class Login {
-  public String email;
-  public String password;
+  private String email;
+  private String password;
 
   public static Login getLoginDetails() {
     return getLoginDetails("eve.holt@reqres.in", "cityslicka@fife");

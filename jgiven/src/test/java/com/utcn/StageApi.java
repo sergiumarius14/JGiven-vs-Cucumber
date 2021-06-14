@@ -1,5 +1,6 @@
 package com.utcn;
 
+import static com.utcn.Utils.getResponsePath;
 import static com.utcn.constants.Constants.REQRES_URL;
 import static io.restassured.http.ContentType.JSON;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -31,8 +32,18 @@ public class StageApi extends Stage<StageApi> {
     return self();
   }
 
+  public StageApi i_submit_a_get_request(String path) {
+    response = RestAssured.given().contentType(JSON).get(path).andReturn();
+    return self();
+  }
+
   public StageApi status_code_is_$(int statusCode) {
     assertEquals(statusCode, response.statusCode());
+    return self();
+  }
+
+  public StageApi login_token_is_$(String token) {
+    assertEquals(token, getResponsePath(response, "token"));
     return self();
   }
 }

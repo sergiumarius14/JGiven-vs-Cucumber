@@ -5,24 +5,35 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.utcn</groupId>
-    <artifactId>Disertatie</artifactId>
+    <artifactId>jgiven-vs-cucummber</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
-    <modules>
-        <module>jgiven</module>
-    </modules>
+    <profiles>
+        <profile>
+            <id>jgiven-automation</id>
+            <modules>
+                <module>jgiven</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>cucumber-automation</id>
+            <modules>
+                <module>cucumber</module>
+            </modules>
+        </profile>
+    </profiles>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <rest.assured.version>4.3.3</rest.assured.version>
-        <junit.version>5.7.1</junit.version>
+        <rest.assured.version>4.4.0</rest.assured.version>
+        <junit.version>5.7.2</junit.version>
         <coveo.formatter.version>2.10</coveo.formatter.version>
         <surefire.plugin.version>3.0.0-M5</surefire.plugin.version>
         <jgiven.version>1.0.0</jgiven.version>
-        <springboot.starter.test.version>2.4.5</springboot.starter.test.version>
-        <spring.version>5.3.6</spring.version>
+        <springboot.starter.test.version>2.5.1</springboot.starter.test.version>
+        <spring.version>5.3.8</spring.version>
         <lombok.version>1.18.20</lombok.version>
     </properties>
 
@@ -50,17 +61,6 @@
                 <groupId>com.tngtech.jgiven</groupId>
                 <artifactId>jgiven-junit5</artifactId>
                 <version>${jgiven.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.tngtech.jgiven</groupId>
-                <artifactId>jgiven-spring</artifactId>
-                <version>${jgiven.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-test</artifactId>
-                <version>${springboot.starter.test.version}</version>
-                <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -103,18 +103,6 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${surefire.plugin.version}</version>
             </plugin>
-
-            <!--            <plugin>-->
-            <!--                <groupId>com.googlecode.maven-java-formatter-plugin</groupId>-->
-            <!--                <artifactId>maven-java-formatter-plugin</artifactId>-->
-            <!--                <version>0.4</version>-->
-            <!--                <executions>-->
-            <!--                    <execution>-->
-            <!--                        <id>format-on-install</id>-->
-            <!--                        <phase>none</phase>-->
-            <!--                    </execution>-->
-            <!--                </executions>-->
-            <!--            </plugin>-->
         </plugins>
     </build>
 
