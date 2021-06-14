@@ -3,6 +3,7 @@ package com.utcn;
 import static com.utcn.Utils.getResponsePath;
 import static com.utcn.constants.Constants.REQRES_URL;
 import static io.restassured.http.ContentType.JSON;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.tngtech.jgiven.Stage;
@@ -45,6 +46,11 @@ public class StageApi extends Stage<StageApi> {
   public StageApi response_field_$_is_$(String path, String value) {
     assertEquals(
         value, getResponsePath(response, path), "Not the expected value for field " + path + "!");
+    return self();
+  }
+
+  public StageApi validate_response_by_schema_$(String schemaName) {
+    response.then().assertThat().body(matchesJsonSchemaInClasspath(schemaName + ".json"));
     return self();
   }
 }
