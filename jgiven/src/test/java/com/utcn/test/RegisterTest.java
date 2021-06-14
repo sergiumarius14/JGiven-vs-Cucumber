@@ -1,6 +1,6 @@
 package com.utcn.test;
 
-import static com.utcn.constants.Constants.LOGIN_ENDPOINT;
+import static com.utcn.constants.Constants.REGISTER_ENDPOINT;
 import static com.utcn.models.Login.getLoginDetails;
 
 import com.tngtech.jgiven.annotation.ScenarioStage;
@@ -14,41 +14,47 @@ import org.junit.jupiter.params.provider.CsvSource;
 import org.springframework.http.HttpEntity;
 
 @ExtendWith(JGivenExtension.class)
-class LoginTest {
+public class RegisterTest {
   @ScenarioStage StageApi stageApi;
 
   @RepeatedTest(3)
-  void repeated_successfully_login() {
+  void repeated_successfully_register() {
     HttpEntity<Object> entity = Utils.prepareRequest(getLoginDetails());
     stageApi
         .given()
         .the_request_is_prepared(entity)
         .when()
-        .i_submit_a_post_request(LOGIN_ENDPOINT)
+        .i_submit_a_post_request(REGISTER_ENDPOINT)
         .then()
         .status_code_is_$(200)
         .and()
-        .response_field_$_is_$("token", "QpwL5tke4Pnpja7X4");
+        .response_field_$_is_$("token", "QpwL5tke4Pnpja7X4")
+        .and()
+        .response_field_$_is_$("id", "4");
   }
 
   @ParameterizedTest
   @CsvSource({
-    "eve.holt@reqres.in, cityslicka@fife, 200",
-    "sergiu@reqres.in, admin, 400",
-    "george.bluth@reqres.in, cityslicka, 200",
-    "janet.weaver@reqres.in, cityslicka, 200",
-    "emma.wong@reqres.in, cityslicka, 200",
-    "charles.morris@reqres.in, cityslicka, 200",
-    "tracey.ramos@reqres.in, cityslicka, 200"
+    "eve.holt@reqres.in, cityslicka@fife, 200, id, 4",
+    "george.bluth@reqres.in, cityslicka, 200, id, 1",
+    "janet.weaver@reqres.in, cityslicka, 200, id, 2",
+    "emma.wong@reqres.in, cityslicka, 200, id, 3",
+    "charles.morris@reqres.in, cityslicka, 200, id, 5",
+    "tracey.ramos@reqres.in, cityslicka, 200, id, 6",
+    "sergiu@reqres.in, , 400, error, Missing password",
+    ", admin, 400, error, Missing email or username"
   })
-  void login(String email, String password, int statusCode) {
+  void register(String email, String password, int statusCode, String path, String value) {
     HttpEntity<Object> entity = Utils.prepareRequest(getLoginDetails(email, password));
     stageApi
         .given()
         .the_request_is_prepared(entity)
         .when()
-        .i_submit_a_post_request(LOGIN_ENDPOINT)
+        .i_submit_a_post_request(REGISTER_ENDPOINT)
         .then()
-        .status_code_is_$(statusCode);
+        .status_code_is_$(statusCode)
+        .and()
+        .response_field_$_is_$(path, value);
+    ;
   }
 }

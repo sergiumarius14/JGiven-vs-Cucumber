@@ -14,6 +14,6 @@ public class Utils {
   }
 
   public static String getResponsePath(Response response, String path) {
-    return response.then().extract().body().path(path);
+    return response.then().extract().body().path(path).toString();
   }
 }

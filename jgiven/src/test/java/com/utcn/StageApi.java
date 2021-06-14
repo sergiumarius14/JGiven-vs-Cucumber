@@ -38,12 +38,13 @@ public class StageApi extends Stage<StageApi> {
   }
 
   public StageApi status_code_is_$(int statusCode) {
-    assertEquals(statusCode, response.statusCode());
+    assertEquals(statusCode, response.statusCode(), "Not the expected status code!");
     return self();
   }
 
-  public StageApi login_token_is_$(String token) {
-    assertEquals(token, getResponsePath(response, "token"));
+  public StageApi response_field_$_is_$(String path, String value) {
+    assertEquals(
+        value, getResponsePath(response, path), "Not the expected value for field " + path + "!");
     return self();
   }
 }
