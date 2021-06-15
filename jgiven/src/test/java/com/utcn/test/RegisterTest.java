@@ -55,6 +55,5 @@ public class RegisterTest {
         .status_code_is_$(statusCode)
         .and()
         .response_field_$_is_$(path, value);
-    ;
   }
 }

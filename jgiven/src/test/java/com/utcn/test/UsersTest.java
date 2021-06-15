@@ -37,7 +37,6 @@ public class UsersTest {
         .status_code_is_$(200)
         .and()
         .response_field_$_is_$("data.email", email);
-    ;
   }
 
   @ParameterizedTest
