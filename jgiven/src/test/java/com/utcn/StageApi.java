@@ -16,6 +16,7 @@ public class StageApi extends Stage<StageApi> {
 
   private Response response;
   private HttpEntity<Object> entity;
+  private String userId;
 
   @BeforeStage
   public StageApi set_base_url() {
@@ -33,8 +34,18 @@ public class StageApi extends Stage<StageApi> {
     return self();
   }
 
+  public StageApi i_submit_a_put_request(String path) {
+    response = RestAssured.given().contentType(JSON).body(entity.getBody()).put(path).andReturn();
+    return self();
+  }
+
   public StageApi i_submit_a_get_request(String path) {
     response = RestAssured.given().contentType(JSON).get(path).andReturn();
+    return self();
+  }
+
+  public StageApi i_submit_a_delete_request(String path) {
+    response = RestAssured.given().contentType(JSON).delete(path).andReturn();
     return self();
   }
 
@@ -52,5 +63,14 @@ public class StageApi extends Stage<StageApi> {
   public StageApi validate_response_by_schema_$(String schemaName) {
     response.then().assertThat().body(matchesJsonSchemaInClasspath(schemaName + ".json"));
     return self();
+  }
+
+  public StageApi i_set_the_user_id() {
+    userId = getResponsePath(response, "id");
+    return self();
+  }
+
+  public String i_get_the_user_id() {
+    return userId;
   }
 }
