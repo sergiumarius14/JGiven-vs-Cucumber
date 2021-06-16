@@ -9,4 +9,4 @@ import org.junit.runner.RunWith;
     plugin = {"pretty", "html:target/cucumber-reports-login"},
     features = "classpath:/features/login.feature",
     glue = "com.utcn.steps")
-class LoginTest {}
+public class LoginTest {}
