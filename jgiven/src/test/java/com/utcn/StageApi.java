@@ -60,12 +60,12 @@ public class StageApi extends Stage<StageApi> {
     return self();
   }
 
-  public StageApi validate_response_by_schema_$(String schemaName) {
+  public StageApi i_validate_response_by_schema_$(String schemaName) {
     response.then().assertThat().body(matchesJsonSchemaInClasspath(schemaName + ".json"));
     return self();
   }
 
-  public StageApi i_set_the_user_id() {
+  public StageApi i_get_the_created_user_id() {
     userId = getResponsePath(response, "id");
     return self();
   }

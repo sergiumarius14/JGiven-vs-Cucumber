@@ -72,7 +72,7 @@ public class UsersTest {
         .then()
         .status_code_is_$(201)
         .and()
-        .validate_response_by_schema_$("createUserSchema");
+        .i_validate_response_by_schema_$("createUserSchema");
   }
 
   @Test
@@ -127,7 +127,7 @@ public class UsersTest {
         .i_submit_a_post_request(USERS_ENDPOINT)
         .and()
         .status_code_is_$(201)
-        .i_set_the_user_id()
+        .i_get_the_created_user_id()
         .when() // update user
         .the_request_is_prepared(
             Utils.prepareRequest(getUserDetails(name, job, phone, title, email)))
