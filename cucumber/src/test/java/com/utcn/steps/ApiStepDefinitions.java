@@ -67,7 +67,12 @@ public class ApiStepDefinitions {
 
   @When("I submit a request to update the created user")
   public void whenISubmitARequestToUpdateTheCreatedUser() {
-    response = RestAssured.given().contentType(JSON).body(entity.getBody()).put(String.format(USER_ENDPOINT,userId)).andReturn();
+    response =
+        RestAssured.given()
+            .contentType(JSON)
+            .body(entity.getBody())
+            .put(String.format(USER_ENDPOINT, userId))
+            .andReturn();
   }
 
   @When("I submit a get request to {}")
@@ -82,7 +87,11 @@ public class ApiStepDefinitions {
 
   @Then("I submit a request to delete the created user")
   public void thenISubmitARequestToDeleteTheCreatedUser() {
-    response = RestAssured.given().contentType(JSON).delete(String.format(USER_ENDPOINT,userId)).andReturn();
+    response =
+        RestAssured.given()
+            .contentType(JSON)
+            .delete(String.format(USER_ENDPOINT, userId))
+            .andReturn();
   }
 
   @Then("status code is {}")

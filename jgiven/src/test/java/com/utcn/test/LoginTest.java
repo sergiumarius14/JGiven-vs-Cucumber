@@ -17,7 +17,7 @@ import org.springframework.http.HttpEntity;
 class LoginTest {
   @ScenarioStage StageApi stageApi;
 
-  @RepeatedTest(3)
+  @RepeatedTest(1)
   void repeated_successfully_login() {
     HttpEntity<Object> entity = Utils.prepareRequest(getLoginDetails());
     stageApi
