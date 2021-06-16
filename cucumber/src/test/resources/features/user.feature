@@ -1,6 +1,6 @@
 Feature: User operations
 
-  Scenario Outline: Get user with id
+  Scenario Outline: Get user by id
     Given I prepare the user request
     When I submit a get request to /api/users/<id>
     Then status code is 200
@@ -60,7 +60,7 @@ Feature: User operations
       | 6  |
       | 7  |
 
-  Scenario Outline: Create, Update and Delete user
+  Scenario Outline: Create, Update and Delete same user
     Given I prepare the userDetails request
     And I submit a post request to /api/users
     And status code is 201

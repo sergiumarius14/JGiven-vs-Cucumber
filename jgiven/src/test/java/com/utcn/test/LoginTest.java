@@ -18,7 +18,7 @@ class LoginTest {
   @ScenarioStage StageApi stageApi;
 
   @RepeatedTest(1)
-  void repeated_successfully_login() {
+  void login() {
     HttpEntity<Object> entity = Utils.prepareRequest(getLoginDetails());
     stageApi
         .given()
@@ -41,7 +41,7 @@ class LoginTest {
     "charles.morris@reqres.in, cityslicka, 200",
     "tracey.ramos@reqres.in, cityslicka, 200"
   })
-  void login(String email, String password, int statusCode) {
+  void login_with_certain_credentials(String email, String password, int statusCode) {
     HttpEntity<Object> entity = Utils.prepareRequest(getLoginDetails(email, password));
     stageApi
         .given()

@@ -26,7 +26,7 @@ public class UsersTest {
     "5, charles.morris@reqres.in",
     "6, tracey.ramos@reqres.in"
   })
-  void get_user(String id, String email) {
+  void get_user_by_id(String id, String email) {
     HttpEntity<Object> entity = Utils.prepareRequest(null);
     stageApi
         .given()
@@ -117,7 +117,7 @@ public class UsersTest {
     "Flavia, architect, 0569, eng, flavia@reqres.in",
     "Larisa, doctor, 0259, dr, larisa@reqres.in"
   })
-  public void create_update_and_delete_user(
+  public void create_update_and_delete_same_user(
       String name, String job, String phone, String title, String email) {
     HttpEntity<Object> entity = Utils.prepareRequest(getUserDetails());
     stageApi

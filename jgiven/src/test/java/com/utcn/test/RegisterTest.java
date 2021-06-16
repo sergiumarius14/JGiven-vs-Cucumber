@@ -18,7 +18,7 @@ public class RegisterTest {
   @ScenarioStage StageApi stageApi;
 
   @RepeatedTest(1)
-  void repeated_successfully_register() {
+  void register() {
     HttpEntity<Object> entity = Utils.prepareRequest(getLoginDetails());
     stageApi
         .given()
@@ -44,7 +44,7 @@ public class RegisterTest {
     "sergiu@reqres.in, , 400, error, Missing password",
     ", admin, 400, error, Missing email or username"
   })
-  void register(String email, String password, int statusCode, String path, String value) {
+  void register_with_certain_credentials(String email, String password, int statusCode, String path, String value) {
     HttpEntity<Object> entity = Utils.prepareRequest(getLoginDetails(email, password));
     stageApi
         .given()
