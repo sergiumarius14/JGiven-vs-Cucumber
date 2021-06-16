@@ -35,6 +35,7 @@
         <springboot.starter.test.version>2.5.1</springboot.starter.test.version>
         <spring.version>5.3.8</spring.version>
         <lombok.version>1.18.20</lombok.version>
+        <cucumber.version>6.10.4</cucumber.version>
     </properties>
 
     <dependencyManagement>
@@ -63,10 +64,23 @@
                 <scope>test</scope>
             </dependency>
             <dependency>
+                <groupId>io.cucumber</groupId>
+                <artifactId>cucumber-java</artifactId>
+                <version>${cucumber.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.cucumber</groupId>
+                <artifactId>cucumber-junit</artifactId>
+                <version>${cucumber.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
                 <groupId>com.tngtech.jgiven</groupId>
                 <artifactId>jgiven-junit5</artifactId>
                 <version>${jgiven.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-web</artifactId>
