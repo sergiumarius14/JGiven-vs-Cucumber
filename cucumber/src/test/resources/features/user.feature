@@ -30,7 +30,7 @@ Feature: User operations
 
   Scenario: Create user and verify response by schema
     Given I prepare the userDetails request
-    When I submit a get request to /api/users
+    When I submit a post request to /api/users
     Then status code is 201
     And I validate response by schema createUserSchema
 
