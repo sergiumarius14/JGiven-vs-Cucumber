@@ -44,7 +44,8 @@ public class RegisterTest {
     "sergiu@reqres.in, , 400, error, Missing password",
     ", admin, 400, error, Missing email or username"
   })
-  void register_with_certain_credentials(String email, String password, int statusCode, String path, String value) {
+  void register_with_certain_credentials(
+      String email, String password, int statusCode, String path, String value) {
     HttpEntity<Object> entity = Utils.prepareRequest(getLoginDetails(email, password));
     stageApi
         .given()
