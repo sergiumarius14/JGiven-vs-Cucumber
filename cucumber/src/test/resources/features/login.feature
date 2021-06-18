@@ -19,3 +19,38 @@ Feature: Login
       | emma.wong@reqres.in      | cityslicka      | 200        |
       | charles.morris@reqres.in | cityslicka      | 200        |
       | tracey.ramos@reqres.in   | cityslicka      | 200        |
+      | eve.holt@reqres.in       | cityslicka@fife | 200        |
+      | sergiu@reqres.in         | admin           | 400        |
+      | george.bluth@reqres.in   | cityslicka      | 200        |
+      | janet.weaver@reqres.in   | cityslicka      | 200        |
+      | emma.wong@reqres.in      | cityslicka      | 200        |
+      | charles.morris@reqres.in | cityslicka      | 200        |
+      | tracey.ramos@reqres.in   | cityslicka      | 200        |
+      | eve.holt@reqres.in       | cityslicka@fife | 200        |
+      | sergiu@reqres.in         | admin           | 400        |
+      | george.bluth@reqres.in   | cityslicka      | 200        |
+      | janet.weaver@reqres.in   | cityslicka      | 200        |
+      | emma.wong@reqres.in      | cityslicka      | 200        |
+      | charles.morris@reqres.in | cityslicka      | 200        |
+      | tracey.ramos@reqres.in   | cityslicka      | 200        |
+      | eve.holt@reqres.in       | cityslicka@fife | 200        |
+      | sergiu@reqres.in         | admin           | 400        |
+      | george.bluth@reqres.in   | cityslicka      | 200        |
+      | janet.weaver@reqres.in   | cityslicka      | 200        |
+      | emma.wong@reqres.in      | cityslicka      | 200        |
+      | charles.morris@reqres.in | cityslicka      | 200        |
+      | tracey.ramos@reqres.in   | cityslicka      | 200        |
+      | eve.holt@reqres.in       | cityslicka@fife | 200        |
+      | sergiu@reqres.in         | admin           | 400        |
+      | george.bluth@reqres.in   | cityslicka      | 200        |
+      | janet.weaver@reqres.in   | cityslicka      | 200        |
+      | emma.wong@reqres.in      | cityslicka      | 200        |
+      | charles.morris@reqres.in | cityslicka      | 200        |
+      | tracey.ramos@reqres.in   | cityslicka      | 200        |
+      | eve.holt@reqres.in       | cityslicka@fife | 200        |
+      | sergiu@reqres.in         | admin           | 400        |
+      | george.bluth@reqres.in   | cityslicka      | 200        |
+      | janet.weaver@reqres.in   | cityslicka      | 200        |
+      | emma.wong@reqres.in      | cityslicka      | 200        |
+      | charles.morris@reqres.in | cityslicka      | 200        |
+      | tracey.ramos@reqres.in   | cityslicka      | 200        |

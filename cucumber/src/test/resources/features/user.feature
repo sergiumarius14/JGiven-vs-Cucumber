@@ -13,6 +13,96 @@ Feature: User operations
       | 4  | eve.holt@reqres.in       |
       | 5  | charles.morris@reqres.in |
       | 6  | tracey.ramos@reqres.in   |
+      | 1  | george.bluth@reqres.in   |
+      | 2  | janet.weaver@reqres.in   |
+      | 3  | emma.wong@reqres.in      |
+      | 4  | eve.holt@reqres.in       |
+      | 5  | charles.morris@reqres.in |
+      | 6  | tracey.ramos@reqres.in   |
+      | 1  | george.bluth@reqres.in   |
+      | 2  | janet.weaver@reqres.in   |
+      | 3  | emma.wong@reqres.in      |
+      | 4  | eve.holt@reqres.in       |
+      | 5  | charles.morris@reqres.in |
+      | 6  | tracey.ramos@reqres.in   |
+      | 1  | george.bluth@reqres.in   |
+      | 2  | janet.weaver@reqres.in   |
+      | 3  | emma.wong@reqres.in      |
+      | 4  | eve.holt@reqres.in       |
+      | 5  | charles.morris@reqres.in |
+      | 6  | tracey.ramos@reqres.in   |
+      | 1  | george.bluth@reqres.in   |
+      | 2  | janet.weaver@reqres.in   |
+      | 3  | emma.wong@reqres.in      |
+      | 4  | eve.holt@reqres.in       |
+      | 5  | charles.morris@reqres.in |
+      | 6  | tracey.ramos@reqres.in   |
+      | 1  | george.bluth@reqres.in   |
+      | 2  | janet.weaver@reqres.in   |
+      | 3  | emma.wong@reqres.in      |
+      | 4  | eve.holt@reqres.in       |
+      | 5  | charles.morris@reqres.in |
+      | 6  | tracey.ramos@reqres.in   |
+      | 1  | george.bluth@reqres.in   |
+      | 2  | janet.weaver@reqres.in   |
+      | 3  | emma.wong@reqres.in      |
+      | 4  | eve.holt@reqres.in       |
+      | 5  | charles.morris@reqres.in |
+      | 6  | tracey.ramos@reqres.in   |
+      | 1  | george.bluth@reqres.in   |
+      | 2  | janet.weaver@reqres.in   |
+      | 3  | emma.wong@reqres.in      |
+      | 4  | eve.holt@reqres.in       |
+      | 5  | charles.morris@reqres.in |
+      | 6  | tracey.ramos@reqres.in   |
+      | 1  | george.bluth@reqres.in   |
+      | 2  | janet.weaver@reqres.in   |
+      | 3  | emma.wong@reqres.in      |
+      | 4  | eve.holt@reqres.in       |
+      | 5  | charles.morris@reqres.in |
+      | 6  | tracey.ramos@reqres.in   |
+      | 1  | george.bluth@reqres.in   |
+      | 2  | janet.weaver@reqres.in   |
+      | 3  | emma.wong@reqres.in      |
+      | 4  | eve.holt@reqres.in       |
+      | 5  | charles.morris@reqres.in |
+      | 6  | tracey.ramos@reqres.in   |
+      | 1  | george.bluth@reqres.in   |
+      | 2  | janet.weaver@reqres.in   |
+      | 3  | emma.wong@reqres.in      |
+      | 4  | eve.holt@reqres.in       |
+      | 5  | charles.morris@reqres.in |
+      | 6  | tracey.ramos@reqres.in   |
+      | 1  | george.bluth@reqres.in   |
+      | 2  | janet.weaver@reqres.in   |
+      | 3  | emma.wong@reqres.in      |
+      | 4  | eve.holt@reqres.in       |
+      | 5  | charles.morris@reqres.in |
+      | 6  | tracey.ramos@reqres.in   |
+      | 1  | george.bluth@reqres.in   |
+      | 2  | janet.weaver@reqres.in   |
+      | 3  | emma.wong@reqres.in      |
+      | 4  | eve.holt@reqres.in       |
+      | 5  | charles.morris@reqres.in |
+      | 6  | tracey.ramos@reqres.in   |
+      | 1  | george.bluth@reqres.in   |
+      | 2  | janet.weaver@reqres.in   |
+      | 3  | emma.wong@reqres.in      |
+      | 4  | eve.holt@reqres.in       |
+      | 5  | charles.morris@reqres.in |
+      | 6  | tracey.ramos@reqres.in   |
+      | 1  | george.bluth@reqres.in   |
+      | 2  | janet.weaver@reqres.in   |
+      | 3  | emma.wong@reqres.in      |
+      | 4  | eve.holt@reqres.in       |
+      | 5  | charles.morris@reqres.in |
+      | 6  | tracey.ramos@reqres.in   |
+      | 1  | george.bluth@reqres.in   |
+      | 2  | janet.weaver@reqres.in   |
+      | 3  | emma.wong@reqres.in      |
+      | 4  | eve.holt@reqres.in       |
+      | 5  | charles.morris@reqres.in |
+      | 6  | tracey.ramos@reqres.in   |
 
   Scenario Outline: Create user
     Given I prepare a user request with <name> <job> <phone> <title> <email>
@@ -20,6 +110,13 @@ Feature: User operations
     Then status code is 201
     Examples:
       | name   | job       | phone  | title | email            |
+      | Sergiu | tester    | 075555 | eng   | sergiu@reqres.in |
+      | Marius | tester    | 4847   | eng   | marius@reqres.in |
+      | Maria  | profesor  | 544    | prof  | maria@reqres.in  |
+      | Ion    | seller    | 03669  |       | ion@reqres.in    |
+      | Dana   | tester    | 064    |       | dana@reqres.in   |
+      | Flavia | architect | 0569   | eng   | flavia@reqres.in |
+      | Larisa | doctor    | 0259   | dr    | larisa@reqres.in |
       | Sergiu | tester    | 075555 | eng   | sergiu@reqres.in |
       | Marius | tester    | 4847   | eng   | marius@reqres.in |
       | Maria  | profesor  | 544    | prof  | maria@reqres.in  |
@@ -73,6 +170,20 @@ Feature: User operations
     And status code is 204
     Examples:
       | name   | job       | phone | title | email            |
+      | Sergiu | tester    | 07455 | eng   | sergiu@reqres.in |
+      | Marius | tester    | 4847  | eng   | marius@reqres.in |
+      | Maria  | profesor  | 544   | prof  | maria@reqres.in  |
+      | Ion    | seller    | 03669 |       | ion@reqres.in    |
+      | Dana   | tester    | 064   |       | dana@reqres.in   |
+      | Flavia | architect | 0569  | eng   | flavia@reqres.in |
+      | Larisa | doctor    | 0259  | dr    | larisa@reqres.in |
+      | Sergiu | tester    | 07455 | eng   | sergiu@reqres.in |
+      | Marius | tester    | 4847  | eng   | marius@reqres.in |
+      | Maria  | profesor  | 544   | prof  | maria@reqres.in  |
+      | Ion    | seller    | 03669 |       | ion@reqres.in    |
+      | Dana   | tester    | 064   |       | dana@reqres.in   |
+      | Flavia | architect | 0569  | eng   | flavia@reqres.in |
+      | Larisa | doctor    | 0259  | dr    | larisa@reqres.in |
       | Sergiu | tester    | 07455 | eng   | sergiu@reqres.in |
       | Marius | tester    | 4847  | eng   | marius@reqres.in |
       | Maria  | profesor  | 544   | prof  | maria@reqres.in  |

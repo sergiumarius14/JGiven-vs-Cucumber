@@ -22,3 +22,43 @@ Feature: Register
       | tracey.ramos@reqres.in   | cityslicka      | 200        | id    | 6                         |
       | sergiu@reqres.in         |                 | 400        | error | Missing password          |
       |                          | admin           | 400        | error | Missing email or username |
+      | eve.holt@reqres.in       | cityslicka@fife | 200        | id    | 4                         |
+      | george.bluth@reqres.in   | cityslicka      | 200        | id    | 1                         |
+      | janet.weaver@reqres.in   | cityslicka      | 200        | id    | 2                         |
+      | emma.wong@reqres.in      | cityslicka      | 200        | id    | 3                         |
+      | charles.morris@reqres.in | cityslicka      | 200        | id    | 5                         |
+      | tracey.ramos@reqres.in   | cityslicka      | 200        | id    | 6                         |
+      | sergiu@reqres.in         |                 | 400        | error | Missing password          |
+      |                          | admin           | 400        | error | Missing email or username |
+      | eve.holt@reqres.in       | cityslicka@fife | 200        | id    | 4                         |
+      | george.bluth@reqres.in   | cityslicka      | 200        | id    | 1                         |
+      | janet.weaver@reqres.in   | cityslicka      | 200        | id    | 2                         |
+      | emma.wong@reqres.in      | cityslicka      | 200        | id    | 3                         |
+      | charles.morris@reqres.in | cityslicka      | 200        | id    | 5                         |
+      | tracey.ramos@reqres.in   | cityslicka      | 200        | id    | 6                         |
+      | sergiu@reqres.in         |                 | 400        | error | Missing password          |
+      |                          | admin           | 400        | error | Missing email or username |
+      | eve.holt@reqres.in       | cityslicka@fife | 200        | id    | 4                         |
+      | george.bluth@reqres.in   | cityslicka      | 200        | id    | 1                         |
+      | janet.weaver@reqres.in   | cityslicka      | 200        | id    | 2                         |
+      | emma.wong@reqres.in      | cityslicka      | 200        | id    | 3                         |
+      | charles.morris@reqres.in | cityslicka      | 200        | id    | 5                         |
+      | tracey.ramos@reqres.in   | cityslicka      | 200        | id    | 6                         |
+      | sergiu@reqres.in         |                 | 400        | error | Missing password          |
+      |                          | admin           | 400        | error | Missing email or username |
+      | eve.holt@reqres.in       | cityslicka@fife | 200        | id    | 4                         |
+      | george.bluth@reqres.in   | cityslicka      | 200        | id    | 1                         |
+      | janet.weaver@reqres.in   | cityslicka      | 200        | id    | 2                         |
+      | emma.wong@reqres.in      | cityslicka      | 200        | id    | 3                         |
+      | charles.morris@reqres.in | cityslicka      | 200        | id    | 5                         |
+      | tracey.ramos@reqres.in   | cityslicka      | 200        | id    | 6                         |
+      | sergiu@reqres.in         |                 | 400        | error | Missing password          |
+      |                          | admin           | 400        | error | Missing email or username |
+      | eve.holt@reqres.in       | cityslicka@fife | 200        | id    | 4                         |
+      | george.bluth@reqres.in   | cityslicka      | 200        | id    | 1                         |
+      | janet.weaver@reqres.in   | cityslicka      | 200        | id    | 2                         |
+      | emma.wong@reqres.in      | cityslicka      | 200        | id    | 3                         |
+      | charles.morris@reqres.in | cityslicka      | 200        | id    | 5                         |
+      | tracey.ramos@reqres.in   | cityslicka      | 200        | id    | 6                         |
+      | sergiu@reqres.in         |                 | 400        | error | Missing password          |
+      |                          | admin           | 400        | error | Missing email or username |
