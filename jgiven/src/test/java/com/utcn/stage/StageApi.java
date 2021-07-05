@@ -1,4 +1,4 @@
-package com.utcn;
+package com.utcn.stage;
 
 import static com.utcn.Utils.getResponsePath;
 import static com.utcn.constants.Constants.REQRES_URL;

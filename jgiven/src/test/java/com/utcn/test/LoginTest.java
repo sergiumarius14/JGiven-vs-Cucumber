@@ -5,8 +5,8 @@ import static com.utcn.models.Login.getLoginDetails;
 
 import com.tngtech.jgiven.annotation.ScenarioStage;
 import com.tngtech.jgiven.junit5.JGivenExtension;
-import com.utcn.StageApi;
 import com.utcn.Utils;
+import com.utcn.stage.StageApi;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
